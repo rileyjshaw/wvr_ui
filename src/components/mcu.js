@@ -74,7 +74,7 @@ export const MCU = observer(() => {
                             .map((p,num)=>
                                 <div style={{display:'flex',flexDirection:'row',justifyContent:'flex-end',alignItems:'center'}} key={num}>
                                     {p.name || pinNames[p.i]}
-                                    {p.i ?
+                                    {p.i != undefined ?
                                         <div 
                                             style={{
                                                 width:15,height:15,margin:10,
