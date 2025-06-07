@@ -8,7 +8,7 @@ import {Stack} from './stack'
 import {Button} from './button'
 import {Slider} from './slider'
 import {auditionLocal, auditionDisk} from '../audio/audition'
-import {NOTE_OFF,ONE_SHOT,LOOP,PAUSE,ASR_LOOP,RETRIGGER,RESTART,NONE,HALT,IGNORE,RELEASE,
+import {NOTE_OFF,NOTE_OFF_RESTART,ONE_SHOT,LOOP,PAUSE,ASR_LOOP,RETRIGGER,RESTART,NONE,HALT,IGNORE,RELEASE,
     PRIORITIES,LINEAR,FIXED,SQUARE_ROOT,INV_SQUARE_ROOT,PAUSE_LOOP,PAUSE_ASR,STEREO,MONO_LEFT,MONO_RIGHT} from '../modules/constants'
 import {SelectNum} from '../components/select'
 import {NumberInput} from '../components/numberInput'
@@ -125,6 +125,7 @@ export const WavDetails = observer(() => {
                                 <option value={RESTART}>restart</option>
                                 <option value={NONE}>ignore</option>
                                 <option value={NOTE_OFF}>note-off</option>
+                                <option value={NOTE_OFF_RESTART}>note-off and restart</option>
                             </SelectNum>
                             <SelectNum
                                 value={noteOff}

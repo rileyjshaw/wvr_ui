@@ -4,7 +4,7 @@ import {observer} from 'mobx-react-lite'
 import {noteToName} from '../helpers/noteToName'
 import {Stack} from './stack'
 import {Button} from './button'
-import {NOTE_OFF,ONE_SHOT,LOOP,PAUSE,RETRIGGER,RESTART,NONE,HALT,IGNORE,PRIORITIES,VELOCITY_MODE_FIXED,VELOCITY_MODE_VELOCITY,
+import {NOTE_OFF,NOTE_OFF_RESTART,ONE_SHOT,LOOP,PAUSE,RETRIGGER,RESTART,NONE,HALT,IGNORE,PRIORITIES,VELOCITY_MODE_FIXED,VELOCITY_MODE_VELOCITY,
     NUM_LAYERS,LINEAR,FIXED,SQUARE_ROOT,INV_SQUARE_ROOT,STEREO,MONO_LEFT,MONO_RIGHT} from '../modules/constants'
 import {SelectNum} from '../components/select'
 import {Slider} from './slider'
@@ -44,6 +44,7 @@ export const RackDetails = observer(() => {
                                 <option value={RESTART}>restart</option>
                                 <option value={NONE}>ignore</option>
                                 <option value={NOTE_OFF}>note-off</option>
+                                <option value={NOTE_OFF_RESTART}>note-off and restart</option>
                             </SelectNum>
                             <SelectNum
                                 label='note-off'
