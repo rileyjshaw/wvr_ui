@@ -92,7 +92,7 @@ export const WavDetails = observer(() => {
                 />
                 <Stack 
                     items={[
-                        store.currentVoice,
+                        store.currentVoice + 1,
                         range ? "range" : `${noteToName(store.wavBoardSelected)} ${noteToOctave(store.wavBoardSelected)}` || '',
                         range ? "range" : store.wavBoardSelected || '',
                         range ? "range" : name || 'empty',
